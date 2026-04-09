@@ -1,3 +1,3 @@
 ## Assumptions and Trade-offs
 
-Readiness was evaluated as current local operability (build, lint, API smoke tests, and dependency audit) rather than full production hardening. No dependency or toolchain changes were made to proactively eliminate the previously observed intermittent Windows `rolldown` native-binding error because it is not reproducible now; this keeps the setup unchanged but leaves a small environment-specific stability risk.
+The implementation prioritizes core CRUD functionality and clarity over advanced UI styling, consistent with the 1-2 hour scope. File-based JSON storage was used instead of a database to keep setup simple and the solution self-contained, trading off concurrency guarantees and long-term scalability for faster delivery and easier local execution.
